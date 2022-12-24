@@ -13,22 +13,16 @@
     }
     return arrey;
 }
-void AveregeCols(int[,] farrey)
+void InArrey(int[,] savearrey, int rows, int cols, int findpozx, int findpozy)
 {
-   
-
-    for (int i = 0; i < farrey.GetLength(0); i++)
-
+    if (findpozx <= rows && findpozy <= cols)
     {
-        double dif = 0;
-        for (int j = 0; j < farrey.GetLength(1); j++)
-        {
-            dif = farrey[i, j] + dif;
-        }
-        Console.WriteLine("       Averege of column  "+i+"  =   " + Math.Round(dif/farrey.GetLength(1), 2));
+        Console.WriteLine("Search  number in massive at x = "+findpozx+"  y= "+ findpozy+"  is  "+savearrey[findpozx-1, findpozy-1]);
     }
-
-
+    else
+    {
+        Console.WriteLine("This element not in massive");
+    }
 }
 Console.WriteLine("input rows :  ");
 int rows = Convert.ToInt32(Console.ReadLine());
@@ -38,10 +32,12 @@ Console.WriteLine("input min :  ");
 int min = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("input max :  ");
 int max = Convert.ToInt32(Console.ReadLine());
-
+Console.WriteLine("input to find the element poz x :  ");
+int findpozx = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("input to the find element poz y :  ");
+int findpozy = Convert.ToInt32(Console.ReadLine());
 
 int[,] arr = new int[rows, cols];
 
-int[,] farrey = FillShowArrey(arr, rows, cols, min, max);
-AveregeCols(farrey);
-
+int[,] savearrey = FillShowArrey(arr, rows, cols, min, max);
+InArrey(savearrey, rows, cols, findpozx, findpozy);
