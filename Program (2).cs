@@ -25,7 +25,7 @@ void AveregeCols(int[,] farrey)
         {
             dif = farrey[i, j] + dif;
         }
-        Console.WriteLine("       Averege of column "+i+"  =   " + Math.Round(dif/farrey.GetLength(1), 2));
+        Console.WriteLine("       Averege of column  "+i+"  =   " + Math.Round(dif/farrey.GetLength(1), 2));
     }
 
 
