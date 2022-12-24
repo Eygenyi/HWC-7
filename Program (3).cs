@@ -21,11 +21,12 @@ void AveregeCols(int[,] farrey)
     {
         for (int j = 0; j < farrey.GetLength(1); j++)
         {
-            Console.Write("    " + farrey[i, j]);
+            Console.Write("  " + farrey[j,i]);
             dif=(farrey[j, i]+dif)/(farrey.GetLength(1));
         }
-    Console.WriteLine("  "+dif);
+    Console.WriteLine("       Averege of column   =   "+Math.Round(dif,2));
     }
+    
 
 }
 Console.WriteLine("input rows :  ");
