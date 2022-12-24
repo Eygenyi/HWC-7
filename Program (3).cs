@@ -14,19 +14,20 @@
     return arrey;
 }
 void AveregeCols(int[,] farrey)
-{double dif=0;
-    
-    for (int i= 0; i < farrey.GetLength(0); i++)
-    
+{
+   
+
+    for (int i = 0; i < farrey.GetLength(0); i++)
+
     {
+        double dif = 0;
         for (int j = 0; j < farrey.GetLength(1); j++)
         {
-            Console.Write("  " + farrey[j,i]);
-            dif=(farrey[j, i]+dif)/(farrey.GetLength(1));
+            dif = farrey[i, j] + dif;
         }
-         Console.WriteLine("       Averege of column   =   "+Math.Round(dif,2));
+        Console.WriteLine("       Averege of column "+i+"  =   " + Math.Round(dif/farrey.GetLength(1), 2));
     }
-    
+
 
 }
 Console.WriteLine("input rows :  ");
